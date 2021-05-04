@@ -1,5 +1,4 @@
 require.config({
-    baseUrl: '/static',
     paths: {
         jquery: '/components/js/main/jquery.min',
         underscore: '/components/js/main/underscore.min',
