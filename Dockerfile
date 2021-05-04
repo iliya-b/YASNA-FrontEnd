@@ -14,4 +14,4 @@ COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
 RUN rm /etc/nginx/conf.d/default.conf
 
 
-CMD envsubst '${"$"}PORT' < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/app.conf && nginx-debug  -g 'daemon off;'
+CMD envsubst '$PORT' < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/app.conf && nginx-debug  -g 'daemon off;'
