@@ -3,7 +3,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'app/frontend/app/Router',
+    'Router',
     'handlebars',
     'instances/CurrentSession',
 ], function (require, $, _, Backbone, router, Handlebars, currentSession) {

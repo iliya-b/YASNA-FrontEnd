@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'app/frontend/app/instances/CurrentSession'
+    'instances/CurrentSession'
 ], function($, _, Backbone, Session) {
     return new (Backbone.Router.extend({
         session: Session,

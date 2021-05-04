@@ -11,7 +11,7 @@ require.config({
 });
 
 require([
-    'app/App',
+    'App',
 ], function(App){
     App.init();
 
