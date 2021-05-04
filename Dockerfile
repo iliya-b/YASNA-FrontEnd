@@ -9,3 +9,7 @@ COPY . .
 FROM nginx:alpine
 
 COPY --from=build /frontend/public /usr/share/nginx/html
+
+COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
+
+CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/app.conf" && nginx -g 'daemon off;'
