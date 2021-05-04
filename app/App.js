@@ -52,7 +52,7 @@ define([
             });
 
             require([
-                    'app/frontend/app/views/Page',
+                    'views/Page',
                     'views/components/Error',
                 ],
                 _.bind(function (PageContainer, ErrorView) {
