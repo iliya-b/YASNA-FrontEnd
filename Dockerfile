@@ -8,7 +8,12 @@ COPY . .
 
 FROM nginx:alpine
 
-COPY --from=build /frontend/public /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
+COPY --from=build /frontend/public .
+COPY --from=build /frontend/app app/js
+COPY --from=build /frontend/app/templates app/templates
+COPY --from=build /frontend/bootstrap app/components/bootstrap
+COPY --from=build /frontend/libs app/components/js/main
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/app.conf.template /etc/nginx/conf.d/default.conf.template
