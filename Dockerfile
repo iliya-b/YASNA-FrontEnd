@@ -11,6 +11,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 COPY --from=build /frontend/public .
 COPY --from=build /frontend/app app/js
+COPY --from=build /frontend/app/config.json app/config.json
 COPY --from=build /frontend/app/templates app/templates
 COPY --from=build /frontend/bootstrap components/bootstrap
 COPY --from=build /frontend/libs components/js/main
