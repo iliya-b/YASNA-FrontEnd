@@ -14,4 +14,4 @@ COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
 RUN rm /etc/nginx/conf.d/default.conf
 
 
-CMD envsubst < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/app.conf && cat /etc/nginx/conf.d/app.conf  && nginx  -g 'daemon off;'
+CMD envsubst < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/app.conf && cat /etc/nginx/nginx.conf  && nginx  -g 'daemon off;'
