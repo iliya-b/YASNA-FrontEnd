@@ -2,10 +2,10 @@ FROM node:13.8.0 as build
 
 WORKDIR /frontend
 
-COPY frontend/package.json package.json
-COPY frontend .
+COPY package.json package.json
+COPY . .
 
 
 FROM nginx:alpine
 
-COPY --from=build /app/frontend/public /usr/share/nginx/html
+COPY --from=build /frontend/public /usr/share/nginx/html
