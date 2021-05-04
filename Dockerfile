@@ -10,8 +10,8 @@ FROM nginx:alpine
 
 COPY --from=build /frontend/public /usr/share/nginx/html
 
-COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf.template
-RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/app.conf.template /etc/nginx/conf.d/default.conf.template
 
 
-CMD sh -c "envsubst < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/app.conf"  && cat /etc/nginx/nginx.conf  && nginx  -g 'daemon off;'
+CMD sh -c "envsubst < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx  -g 'daemon off;'
