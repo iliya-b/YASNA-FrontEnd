@@ -1,5 +1,6 @@
-
-
+.entry-motto {
+    color: #fefefe;
+}
 #entry-form input {
     padding: 30px;
     width: 600px;
@@ -8,4 +9,15 @@
 #entry-form button {
     padding: 20px;
     width: 300px;
+}
+
+.bgvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -9999;
 }
