@@ -18,7 +18,9 @@ define([
         },
 
         render: function() {
-            this.$el.html(this.template({}));
+            this.$el.html(this.template({
+                cities: this.model.get('city')
+            }));
             return this;
         }
     });

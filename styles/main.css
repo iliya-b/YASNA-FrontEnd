@@ -21,3 +21,13 @@
   height: auto;
   z-index: -9999;
 }
+
+#profile-container {
+    position: absolute;
+    left: 0;
+    height: 500px;
+}
+
+#profile-container .card-body {
+    min-height: 500px;
+}
