@@ -15,6 +15,9 @@ COPY --from=build /frontend/app/config.json app/config.json
 COPY --from=build /frontend/app/templates app/templates
 COPY --from=build /frontend/bootstrap components/bootstrap
 COPY --from=build /frontend/libs components/js/main
+COPY --from=build /frontend/styles styles
+
+# todo: use gulp
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/app.conf.template /etc/nginx/conf.d/default.conf.template
