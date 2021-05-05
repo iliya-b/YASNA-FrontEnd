@@ -79,7 +79,7 @@ define([
                     router.on('route:index', _.bind(function () {
 
                         this.Container.setTitle('YASNA');
-                        this.Container.setPage(ErrorView);
+                        this.Container.setPage(MainPage);
                     }, this));
 
 
