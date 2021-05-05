@@ -53,9 +53,10 @@ define([
 
             require([
                     'views/Page',
+                    'views/MainPage',
                     'views/components/Error',
                 ],
-                _.bind(function (PageContainer, ErrorView) {
+                _.bind(function (PageContainer, MainPage, ErrorView) {
                     this.Container = new PageContainer({el: $("#app")});
                     var _this = this;
 
