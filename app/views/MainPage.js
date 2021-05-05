@@ -4,8 +4,9 @@ define([
     'backbone',
     'handlebars',
     'models/ProfileStatistics',
+    'views/ProfileStats',
     'text!/app/templates/main_page.hbs',
-], function($, _, Backbone, Handlebars, ProfileStatistics, page_tpl){
+], function($, _, Backbone, Handlebars, ProfileStatistics, ProfileView, page_tpl){
 
     return Backbone.View.extend({
         template: Handlebars.compile(page_tpl),
@@ -14,6 +15,11 @@ define([
             'click #entry-form button': 'submit'
         },
 
+        drawStats: function(data){
+            var model = new ProfileStatistics(data);
+            this.view = new ProfileView({model: model, el: this.$el.find('#profile-container')});
+            this.view.render();
+        },
         submit: function(e) {
             var url = this.$el.find('#entry-form input').val();
             $.ajax({
@@ -22,10 +28,7 @@ define([
                 contentType: 'application/json',
                 data: JSON.stringify({url: url})
 
-            }).done(function(data){
-                var model = new ProfileStatistics(data);
-                alert(JSON.stringify(data));
-            }).fail(function(){
+            }).done(_.bind(this.drawStats, this)).fail(function(){
                 alert('error..');
             });
             return false;
