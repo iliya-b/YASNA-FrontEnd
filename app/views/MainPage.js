@@ -25,6 +25,8 @@ define([
             }).done(function(data){
                 var model = new ProfileStatistics(data);
                 alert(JSON.stringify(data));
+            }).fail(function(){
+                alert('error..');
             });
             return false;
         },
