@@ -4,24 +4,26 @@
   "description": "YASNA frontend",
   "main": "index.js",
   "dependencies": {
-    "mustache": "^4.0.0",
-    "pnotify": "^4.0.0"
+    "handlebars": "^4.7.7",
+    "pnotify": "^4.0.0",
+    "bootstrap": "4.6.0",
+    "backbone": "1.4.0",
+    "jquery": "3.6.0",
+    "requirejs": "2.3.6",
+    "requirejs-text": "2.0.16",
+    "underscore": "1.13.1",
+    "vis-network": "9.0.4",
+
+    "popper.js":"^1.16.1",
+    "@egjs/hammerjs": "^2.0.0",
+    "keycharm": "^0.2.0",
+    "timsort": "^0.3.0",
+    "vis-data": "^7.0.0",
+    "vis-util": "^5.0.1"
+
+
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.1.0",
-    "gulp-minify": "^3.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-rtlcss": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "jshint": "^2.11.0",
-    "node": "13.8.0",
-    "node-sass": "^4.13.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
